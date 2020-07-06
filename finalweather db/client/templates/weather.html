@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Weather</title>
+    
+</head>
+
+<body>
+    <h1 class='text-center p-3'>Weather</h1><br />
+    <form  method="POST">
+       
+            <input type="text" name="city">
+            <input class="btn btn-info" type="submit" value="Get weather">
+        
+    </form>
+    {% if weather %}
+    <h1>{{ weather.city }}</h1>
+    <h2>{{ weather.temperature }} &#x2103</h2>
+    <h3>{{ weather.description }}</h3>
+    
+    {% endif %}
+</body>
+
+</html>
